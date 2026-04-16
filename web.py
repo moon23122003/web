@@ -5,18 +5,27 @@ import streamlit as st
 page = st.sidebar.selectbox("Choose page", ["Home", "Loading", "Wait"])
 
 # Home Page
-if page == "Home":
-    st.title("Welcome to my page")
-    name = st.text_input("Enter your name")
-    if name:
-        st.write(f"hello, {name}!")
+import streamlit as st
+st.title("welcome to my page")
+name=st.text_input("Enter the name")
+if name:
+       st.write(f"hello,{name}!")
 
 # Loading Page
-elif page == "Loading":
-    st.title("Loading Page")
-    st.write("Loading... please wait")
+import streamlit as st
+import time#core python
+
+with st.spinner("Loding...."):
+       time.sleep(5)
+with st.sidebar:
+       st.write("Show the above options")
+       
+       
+st.title("health care prediction project")
 
 # Wait Page
-elif page == "Wait":
-    st.title("Wait Page")
-    st.write("Processing... hold on")
+import streamlit as st
+import time#core python
+with st.spinner("Loding...."):
+       time.sleep(5)
+st.title("SMART DIAGNOSIS SYSTEM")
